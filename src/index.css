@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 
+           transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .featured-card {
+    @apply relative overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-800 
+           text-white rounded-xl shadow-xl;
+  }
+
+  .deal-card {
+    @apply bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 
+           border border-gray-100 hover:border-indigo-100;
+  }
+
+  .search-input {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 
+           focus:ring-indigo-500 focus:border-transparent shadow-sm;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
